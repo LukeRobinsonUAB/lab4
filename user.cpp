@@ -1,40 +1,36 @@
 #include <string>
 #include <vector>
+#include "user.h"
 
-class User {
-    public:
-        void setusername(std::string user) {
-            this->userName = user;
-        }
 
-        void setemail(std::string mail) {
-            this->email = mail;
-        }
+    void User::setuserName(std::string user) {
+        this->userName = user;
+    }
 
-        std::string getuserName() {
-            return this->userName;
-        }
+    void User::setEmail(std::string mail) {
+        this->email = mail;
+    }
 
-        std::string getemail() {
-            return this->email;
-        }
+    std::string User::getuserName() {
+        return this->userName;
+    }
+
+    std::string User::getEmail() {
+        return this->email;
+    }
     
-        void addFriend() {
+    void User::addFriend() {
+        
+    }
 
-        }
+    void User::removeFriend() {
 
-        void removeFriend() {
+    }
 
-        }
+    void User::numFriends() {
 
-        void numFriends() {
+    }
 
-        }
+    User* User::getFriendAt(int i) {
 
-
-    private:
-        std::string userName;
-        std::string email;
-        std::vector<User*> friendList;
-
-};
+    }
