@@ -20,7 +20,7 @@
     }
     
     void User::addFriend() {
-        
+
     }
 
     void User::removeFriend() {

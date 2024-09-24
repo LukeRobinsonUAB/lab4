@@ -1,39 +1,29 @@
-class Deque {
-    public:
-        
+#include "deque.h"
 
-        void push_front(int a) {
+        void Deque::push_front(int a) {
 
         }
 
-        void push_back(int z) {
+        void Deque::push_back(int z) {
 
         }
 
-        void pop_front() {
+        void Deque::pop_front() {
 
         }
 
-        void pop_back() {
+        void Deque::pop_back() {
 
         }
 
-        int peak_front() {
+        int Deque::peak_front() {
 
         }
 
-        int peak_back() {
+        int Deque::peak_back() {
 
         }
 
-        void remove_all() {
+        void Deque::remove_all() {
 
         }
-
-
-
-    private:
-
-
-
-};
