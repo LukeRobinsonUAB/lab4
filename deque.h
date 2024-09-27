@@ -1,30 +1,43 @@
 #ifndef _DEQUEH_
 #define _DEQUEH_
 
+struct node {
+        int data;
+        node *lnode;
+        node *rnode;
+
+ node(int cdata) {
+        data = cdata;
+        lnode = nullptr;
+        rnode = nullptr;
+    }
+};
 
 class Deque {
     public:
-        
 
-        void push_front(int a);
+        Deque();
 
-        void push_back(int z);
+        void push_front(int z);
+
+        void push_back(int a);
 
         void pop_front();
 
         void pop_back();
 
-        int peak_front();
+        int peek_front();
 
-        int peak_back();
+        int peek_back();
 
         void remove_all();
 
+        ~Deque();
 
 
     private:
-        ///pointers to front or back?
-
+        node* tail;
+        node* head;
 
 };
 
