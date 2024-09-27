@@ -1,5 +1,5 @@
 #include "deque.h"
-
+#include <iostream>
 
 Deque::Deque() {
         tail = nullptr;
@@ -29,11 +29,24 @@ void Deque::push_back(int a) {
 }
 
 void Deque::pop_front() {
-
+        if (head == nullptr) {
+                std::cout << "cannot pop_front" << std::endl;
+                return;
+        }
+        std::cout << "debug: attempting to pop " << head->data << " from front/back/start of deque." << std::endl; 
+        node* newHead = head->rnode;
+        delete head;
+        head = newHead;
+        head->lnode = nullptr;
 }
 
 void Deque::pop_back() {
-
+        if (tail == nullptr) {
+                std::cout << "cannot pop_back" << std::endl;
+                return;
+        }
+        //delete tail;
+        std::cout << "pop_back not yet functional" << std::endl;
 }
 
 int Deque::peek_front() {
