@@ -33,7 +33,7 @@ void Deque::pop_front() {
                 std::cout << "cannot pop_front" << std::endl;
                 return;
         }
-        std::cout << "debug: attempting to pop " << head->data << " from front/back/start of deque." << std::endl; 
+        std::cout << "debug: attempting to pop " << head->data << " from front/back/start/leftmostNode of deque." << std::endl; 
         node* newHead = head->rnode;
         delete head;
         head = newHead;
@@ -45,8 +45,12 @@ void Deque::pop_back() {
                 std::cout << "cannot pop_back" << std::endl;
                 return;
         }
-        //delete tail;
         std::cout << "pop_back not yet functional" << std::endl;
+        node* t = tail;
+        tail = tail->lnode;
+        tail->rnode = nullptr;
+        delete t;
+
 }
 
 int Deque::peek_front() {
