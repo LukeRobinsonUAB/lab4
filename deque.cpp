@@ -33,11 +33,11 @@ void Deque::pop_front() {
                 std::cout << "cannot pop_front" << std::endl;
                 return;
         }
-        std::cout << "debug: attempting to pop " << head->data << " from front/back/start/leftmostNode of deque." << std::endl; 
-        node* newHead = head->rnode;
-        delete head;
-        head = newHead;
+        std::cout << "debug: attempting to pop " << head->data << " from front/start/leftmostNode of deque." << std::endl; 
+        node* t = head;
+        head = head->rnode;
         head->lnode = nullptr;
+        delete t;
 }
 
 void Deque::pop_back() {
@@ -45,7 +45,7 @@ void Deque::pop_back() {
                 std::cout << "cannot pop_back" << std::endl;
                 return;
         }
-        std::cout << "pop_back not yet functional" << std::endl;
+        std::cout << "debug: attempting to pop " << tail->data << " from back/end/rightmostNode of deque." << std::endl; 
         node* t = tail;
         tail = tail->lnode;
         tail->rnode = nullptr;
@@ -63,8 +63,11 @@ int Deque::peek_back() {
 
 void Deque::remove_all() {
         //delete obj// will call deconstructor?
+        while (tail != nullptr) {
+                pop_back();
+        }
 }
 
 Deque::~Deque() {
-        //delete[] pointersWeUsed?;
+        remove_all();
 }

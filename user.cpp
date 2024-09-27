@@ -3,34 +3,34 @@
 #include "user.h"
 
 
-    void User::setuserName(std::string user) {
-        this->userName = user;
-    }
+void User::setuserName(std::string user) {
+    this->userName = user;
+}
 
-    void User::setEmail(std::string mail) {
-        this->email = mail;
-    }
+void User::setEmail(std::string mail) {
+    this->email = mail;
+}
 
-    std::string User::getuserName() {
-        return this->userName;
-    }
+std::string User::getuserName() {
+    return this->userName;
+}
 
-    std::string User::getEmail() {
+std::string User::getEmail() {
         return this->email;
     }
     
-    void User::addFriend() {
+void User::addFriend() {
 
-    }
+}
 
-    void User::removeFriend() {
+void User::removeFriend() {
 
-    }
+}
 
-    void User::numFriends() {
+void User::numFriends() {
 
-    }
+}
 
-    User* User::getFriendAt(int i) {
+User* User::getFriendAt(int i) {
 
-    }
+}
