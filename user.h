@@ -6,6 +6,9 @@
 
 class User {
     public:
+
+        User();
+
         void setuserName(std::string user);
 
         void setEmail(std::string mail);
@@ -14,11 +17,11 @@ class User {
 
         std::string getEmail();
     
-        void addFriend();
+        void addFriend(User* newfriend);
 
-        void removeFriend();
+        void removeFriend(std::string friendToRemove);
 
-        void numFriends();
+        int numFriends();
 
         User* getFriendAt(int i);
 

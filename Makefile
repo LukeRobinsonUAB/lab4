@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++23
 # Target executable name
 TARGET = lab4
 # Source files
-SRCS = main.cpp deque.cpp
+SRCS = main.cpp deque.cpp user.cpp
 
 # Object files
 OBJS = $(SRCS:.cpp=.o)

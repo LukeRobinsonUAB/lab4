@@ -1,7 +1,13 @@
 #include <string>
 #include <vector>
 #include "user.h"
+#include <iostream>
 
+User::User() {
+    userName = "";
+    email = "";
+    friendList = {};
+}
 
 void User::setuserName(std::string user) {
     this->userName = user;
@@ -19,18 +25,25 @@ std::string User::getEmail() {
         return this->email;
     }
     
-void User::addFriend() {
-
+void User::addFriend(User* newfriend) {
+    friendList.push_back(newfriend);
 }
 
-void User::removeFriend() {
-
+void User::removeFriend(std::string friendToRemove) {
+    for (auto it = friendList.begin(); it != friendList.end(); ++it) {
+            if ((*it)->getuserName() == friendToRemove) {
+                friendList.erase(it);
+                break;
+            }
+        }
 }
 
-void User::numFriends() {
-
+int User::numFriends() {
+    return friendList.size(); //warning conversion size_t -> int
 }
 
 User* User::getFriendAt(int i) {
-
+    if (i >= 0 && i < friendList.size())
+            return friendList[i];
+    return nullptr;
 }
